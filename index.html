@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/output.css">
 
-<!--  META TAG OG -->
-   <meta property="og:type" content="website"/>
-   <meta property="og:title" content="House BURGUE"/>
-   <meta property="og:image" content="https://cardapio-online-lsop5isiu-cleitons-projects-2d1117b2.vercel.app/imagem/hamb-1.png"/>
-   <meta property="og:description" content="O melhor da cidade !!!"/>
-   <meta property="og:site_name" content="House Burgue"/>
+    <!--  META TAG OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="House BURGUE" />
+    <meta property="og:image"
+        content="https://cardapio-online-lsop5isiu-cleitons-projects-2d1117b2.vercel.app/imagem/hamb-1.png" />
+    <meta property="og:description" content="O melhor da cidade !!!" />
+    <meta property="og:site_name" content="House Burgue" />
 
 
 
@@ -190,26 +191,29 @@
     <!-- FIM DO MENU-->
     <!-- MORDAL CART-->
 
-    <div
-     class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden"
-     id="cart-mordal"
-     >
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden"
+        id="cart-mordal">
 
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
-            <p class="font-bold">Total: <span id="cart-total" >0.00</span></p>
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
 
             <p class="font-bold mt-3">Endereço de entrega </p>
-            <input 
-            type="text" 
-            placeholder="Digite seu endereço completo..." 
-            id="address"
+            <input type="text" placeholder="Digite seu endereço completo..." id="address"
                 class="w-full border-2 p-1 rounded my-1" />
 
             <p class="text-red-500 hidden" id="address-warn">Digite seu enderço completo!</p>
+
+            <p class="font-medium mt-2">Forma de Pagamento</p>
+            <select class="border-2 border-gray-900" id="formadePagamento" name="forma de pagamento">
+                <option value="Pix">Pix</option>
+                <option value="Cartao" selected>Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </select>
+
 
             <div class="flex items-center justify-between mt-5 w-full">
                 <button id="close-modal-btn">Fechar</button>
@@ -232,13 +236,16 @@
             (<span id="cart-count">0</span>)
             Veja meu carrinho
             <i class="fa fa-cart-plus text-lg text-white"></i>
+
         </button>
+
+
     </footer>
 
-    <!-- FIM DO BUTTON CART FOOTER--> 
+    <!-- FIM DO BUTTON CART FOOTER-->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
 
 </body>
 

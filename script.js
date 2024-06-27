@@ -9,6 +9,7 @@ const closeModalBtn = document.getElementById("close-modal-btn")
 const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
+const selectElement = document.getElementById("formadePagamento")
 
 let cart = [];
 
@@ -141,8 +142,12 @@ addressInput.addEventListener("input", function(event){
         addressWarn.classList.add("hidden")
     }
 
-    
 })
+
+// Selecionando forma de pagamento
+ 
+
+ 
  // Finalizar pedido 
 
 checkoutBtn.addEventListener("click", function (){
@@ -172,6 +177,8 @@ if(!isOpen){
         addressInput.classList.add("border-red-500")
         return;
     }
+    const selectedValue= selectElement.value;
+
 
     // ENVIAR O PEDIDO PARA API WHATS 
    const cartItems = cart.map((item) => {
@@ -183,7 +190,7 @@ if(!isOpen){
    const message = encodeURIComponent(cartItems)
    const phone = "38998003987"
 
-   window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blanck")
+   window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value} Forma de pagameto: ${selectedValue}`, "_blanck")
 
    cart = [];
    updateCartModal();
@@ -193,7 +200,7 @@ if(!isOpen){
 function checkRestauranteOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 23;
+    return hora >= 8 && hora < 23;
     // true = restaurante esta aberto
 }
 
